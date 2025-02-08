@@ -1,1 +1,108 @@
 
+/* Root variables for eco-friendly theme */
+:root {
+    --primary-green: #4CAF50; /* Main green color */
+    --secondary-green: #388E3C; /* Darker green */
+    --earth-brown: #8D6E63; /* Earthy brown */
+    --soft-cream: #F4EBD0; /* Soft neutral background */
+    --leaf-green: #81C784; /* Accent green */
+    --dark-text: #2E3D29; /* Dark green text */
+    --light-text: #FFFFFF;
+}
+
+/* Global styles */
+body {
+    background-color: var(--soft-cream);
+    color: var(--dark-text);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Webcam container styling */
+#webcam-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 60%; /* Adjust width */
+    max-width: 500px;
+    border: 3px solid var(--primary-green);
+    padding: 15px;
+    background: var(--light-text);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Label container styling */
+#label-container {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--secondary-green);
+}
+
+/* Styled button */
+button {
+    background-color: var(--primary-green);
+    color: var(--light-text);
+    border: 2px solid var(--secondary-green);
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--secondary-green);
+    border-color: var(--earth-brown);
+}
+
+/* Footer */
+.mastfoot {
+    background-color: var(--earth-brown);
+    color: var(--light-text);
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.mastfoot a {
+    color: var(--leaf-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mastfoot a:hover {
+    color: var(--primary-green);
+    text-decoration: underline;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container, button, .mastfoot {
+    animation: fadeIn 1s ease-in-out;
+}
